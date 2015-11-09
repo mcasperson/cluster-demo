@@ -15,5 +15,11 @@
 Hello!  The time is now <%= date %>
 <br/>
 The local server's IP address is <%= request.getLocalAddr() %>
+
+<p>
+    To easily test that your session is being replicated, configure your hosts file with a domain
+    and then use <a href=https://addons.mozilla.org/en-US/firefox/addon/hostadmin/">this Firefox extension</a>
+    to switch between each individual IP address.
+</p>
 </body>
 </html>
