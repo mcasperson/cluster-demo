@@ -9,5 +9,7 @@
     java.util.Date date = new java.util.Date();
 %>
 Hello!  The time is now <%= date %>
+<br/>
+The local server's IP address is <%= request.getLocalAddr() %>
 </body>
 </html>
