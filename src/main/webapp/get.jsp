@@ -1,6 +1,6 @@
  <html>
  <body>
- <h2>Get Time</h2>
+ <h2>Retrieve Data</h2>
 <%
     response.setHeader("Cache-Control", "no-cache"); //HTTP 1.1
     response.setHeader("Pragma", "no-cache"); //HTTP 1.0
@@ -8,11 +8,21 @@
 
     System.out.println( "Getting date now" );
 %>
- The name you saved was <%= session.getAttribute("name") %>
- <br/>
- Random number saved to application scope is <%= application.getAttribute("random") %>
- <br/>
- The local server's IP address is <%= request.getLocalAddr() %>
+ <p>
+    The name you saved was <%= session.getAttribute("name") %>
+ </p>
+ <p>
+    Random number saved to application scope is <%= application.getAttribute("random") %>
+ </p>
+ <p>
+    The local server's IP address is <%= request.getLocalAddr() %>
+ </p>
+ <p>
+     To save data in the session scope, click <a href="put.jsp">here</a>
+ </p>
+ <p>
+     To reopen this page, click <a href="get.jsp">here</a>
+ </p>
  </body>
  </html>
 
