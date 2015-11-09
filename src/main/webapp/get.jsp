@@ -8,7 +8,7 @@
 
     System.out.println( "Getting date now" );
 %>
- The time is <%= session.getAttribute("current.time") %>
+ The name you saved was <%= session.getAttribute("name") %>
  <br/>
  Random number saved to application scope is <%= application.getAttribute("random") %>
  <br/>

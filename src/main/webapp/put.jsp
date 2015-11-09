@@ -6,11 +6,16 @@
      response.setHeader("Pragma", "no-cache"); //HTTP 1.0
      response.setDateHeader("Expires", 0); //prevents caching at the proxy server
 
+     String name = request.getParameter("name");
+     if (name == null) {
+         name = "Captain Risky";
+     }
+
      System.out.println( "Putting date now" );
-     session.setAttribute("current.time", new java.util.Date());
-     application.setAttribute("random", new Math.abs(java.util.Random().nextInt()));
+     session.setAttribute("name", name);
+     application.setAttribute("random", java.lang.Math.abs(new java.util.Random().nextInt()));
  %>
- The time is set to <%= session.getAttribute("current.time") %>
+ The name you saved was <%= session.getAttribute("name") %>
  <br/>
  Random number saved to application scope is <%= application.getAttribute("random") %>
  <br/>
