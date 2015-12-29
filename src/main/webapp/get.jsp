@@ -6,13 +6,10 @@
     response.setHeader("Pragma", "no-cache"); //HTTP 1.0
     response.setDateHeader("Expires", 0); //prevents caching at the proxy server
 
-    System.out.println( "Getting date now" );
+    System.out.println( "Getting name now" );
 %>
  <p>
     The name you saved was <%= session.getAttribute("name") %>.
- </p>
- <p>
-    Random number saved to application scope is <%= application.getAttribute("random") %>.
  </p>
  <p>
      To save data in the session scope, click <a href="put.jsp">here</a>.

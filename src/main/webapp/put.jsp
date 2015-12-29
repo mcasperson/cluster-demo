@@ -11,9 +11,8 @@
          name = "Captain Risky";
      }
 
-     System.out.println( "Putting date now" );
+     System.out.println( "Putting name now" );
      session.setAttribute("name", name);
-     application.setAttribute("random", java.lang.Math.abs(new java.util.Random().nextInt()));
  %>
  <p>
     The name you saved was <%= session.getAttribute("name") %>.
@@ -21,9 +20,6 @@
  <p>
      You can define this name with the <i>name</i> query param, like
     <a href="put.jsp?name=Captain%20Risky">put.jsp?name=Captain%20Risky</a>.
- </p>
- <p>
-    Random number saved to application scope is <%= application.getAttribute("random") %>.
  </p>
  <p>
      To view the data in the session scope, click <a href="get.jsp">here</a>.
